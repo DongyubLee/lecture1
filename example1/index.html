@@ -15,9 +15,9 @@
                 font-family: sans-serif;
             } */
 
-            img {
+            /*img {
                 width: 512px; /* set image width */
-            }
+            /*}
 
             #caption {
                 display: none; /* start with caption hidden */
@@ -30,17 +30,19 @@
     <body>
         <!-- some text and links -->
         <p>
-            <a href="https://commons.wikimedia.org/wiki/File:Black_hole_-_Messier_87_crop_max_res.jpg">Event Horizon Telescope, uploader cropped and converted TIF to JPG</a>, <a href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a>, via Wikimedia Commons
+            <a href="https://en.wikipedia.org/wiki/Moon">Moon</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>, via Wikimedia Commons
         </p>
         
         <!-- an image -->
         <img id="myImage"
-             alt="Black hole - Messier 87 crop max res"
-             src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Black_hole_-_Messier_87_crop_max_res.jpg/1024px-Black_hole_-_Messier_87_crop_max_res.jpg">
+             alt="Full Moon photograph taken 10-22-2010"
+             src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/FullMoon2010.jpg/220px-FullMoon2010.jpg">
 
         <!-- a caption -->
         <p id="caption">
-            The Event Horizon Telescope (EHT) — a planet-scale array of eight ground-based radio telescopes forged through international collaboration — was designed to capture images of a black hole. In coordinated press conferences across the globe, EHT researchers revealed that they succeeded, unveiling the first direct visual evidence of the supermassive black hole in the centre of Messier 87 and its shadow.
+            Full Moon photograph taken 10-22-2010 from Madison, Alabama, USA. Photographed with a Celestron 9.25 Schmidt-Cassegrain telescope. Acquired with a Canon EOS Rebel T1i (EOS 500D), 20 images stacked to reduce noise. 200 ISO 1/640 sec.
+
+
         </p>
 
         <!-- javascript -->
@@ -55,11 +57,13 @@
             // define what happens when there is a mouse over event
             function mouseOver() {
                 document.getElementById('caption').style.display = 'block';
+                document.getElementById('myImage').width = 512;
             }
 
             // define what happens when there is a mouse out event
             function mouseOut() {
                 document.getElementById('caption').style.display = 'none';
+                document.getElementById('myImage').width = 220;
             }
         </script>
 
